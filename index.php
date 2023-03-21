@@ -10,15 +10,18 @@
     <title>Ciao</title>
 </head>
 <?php
-$characters ='abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRTSUVWXYZZ1234567890!?@$%&';
-$character = str_split($characters);
-//var_dump ($prova);
-$random_index = array_rand($character);
-// var_dump ($provaP);
-$random_character =  $character[$random_index];
-// var_dump ($random_character);
-$lenght = $_GET ['lenght'];
-var_dump ($lenght);
+$characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?@$%&';
+$lenght = $_GET['lenght'];
+$password = '';
+$character_count = strlen($characters);
+//  var_dump ($character_count);
+for ($i = 0; $i < $lenght; $i++) {
+    $random_character = $characters[rand(0, $character_count - 1)];
+    // var_dump($random_character);
+    $password = $password . $random_character;
+}
+echo $password;
+
 
 
 ?>
