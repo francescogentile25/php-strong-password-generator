@@ -9,12 +9,23 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Ciao</title>
 </head>
+<?php
+$password ='abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRTSUVWXYZZ1234567890!?@$%&';
+$prova = str_split($password);
+//var_dump ($prova);
+$provaP = array_rand($prova);
+// var_dump ($provaP);
+echo $prova[$provaP];
+
+
+?>
 
 <body>
     <h1>Ciao</h1>
     <div class="container">
         <form action="index.php" method="GET">
             <input type="text" name="password" placeholder="inserisci la lunghezza della password" class="w-25">
+
             <button type="submit">Invia</button>
         </form>
     </div>
