@@ -10,12 +10,15 @@
     <title>Ciao</title>
 </head>
 <?php
-$password ='abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRTSUVWXYZZ1234567890!?@$%&';
-$prova = str_split($password);
+$characters ='abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRTSUVWXYZZ1234567890!?@$%&';
+$character = str_split($characters);
 //var_dump ($prova);
-$provaP = array_rand($prova);
+$random_index = array_rand($character);
 // var_dump ($provaP);
-echo $prova[$provaP];
+$random_character =  $character[$random_index];
+// var_dump ($random_character);
+$lenght = $_GET ['lenght'];
+var_dump ($lenght);
 
 
 ?>
@@ -24,7 +27,7 @@ echo $prova[$provaP];
     <h1>Ciao</h1>
     <div class="container">
         <form action="index.php" method="GET">
-            <input type="text" name="password" placeholder="inserisci la lunghezza della password" class="w-25">
+            <input type="number" name="lenght" placeholder="inserisci la lunghezza della password" class="w-25">
 
             <button type="submit">Invia</button>
         </form>
