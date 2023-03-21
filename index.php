@@ -20,18 +20,21 @@ for ($i = 0; $i < $lenght; $i++) {
     // var_dump($random_character);
     $password = $password . $random_character;
 }
-echo $password;
+// echo $password;
 
 
 
 ?>
 
 <body>
-    <h1>Ciao</h1>
     <div class="container">
+        <h1>La tua passowrd è :
+            <span class="text-danger">
+                <?php  echo $password ?>
+            </span>
+        </h1>
         <form action="index.php" method="GET">
             <input type="number" name="lenght" placeholder="inserisci la lunghezza della password" class="w-25">
-
             <button type="submit">Invia</button>
         </form>
     </div>
